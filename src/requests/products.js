@@ -8,3 +8,12 @@ export const getProducts = async () => {
     console.log(error);
   }
 };
+
+export const getProductById = async id => {
+  try {
+    const response = await apiInstance(`/products/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+};

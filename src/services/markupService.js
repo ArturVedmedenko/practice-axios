@@ -9,3 +9,14 @@ export const createMarkUpProducts = arr => {
     )
     .join('');
 };
+
+export const createMarkUpProduct = ({
+  title,
+  price,
+  thumbnail,
+  brand,
+}) => `  <div>
+  <h3>Title: ${title}</h3>
+  <p>Price: ${price} </p>
+  <img src="${thumbnail}" alt="${brand}">
+</div>`;
